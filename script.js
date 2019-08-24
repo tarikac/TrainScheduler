@@ -7,7 +7,8 @@ var config = {
     databaseURL: "https://rika-school-prj.firebaseio.com",
     projectId: "rika-school-prj",
     storageBucket: "rika-school-prj.appspot.com",
-    messagingSenderId: "478499791771"
+    messagingSenderId: "478499791771",
+    appId: "1:478499791771:web:33abcdf6a8cf00d4"
   };
   firebase.initializeApp(config);
 
@@ -21,8 +22,7 @@ var trainName;
 var destination;
 var trainTime;
 var frequency;
-var monthsWorked = "";
-var totalBilled = "";
+
 
 $("#submit-info").on("click", function(){
 
@@ -66,9 +66,7 @@ $("#submit-info").on("click", function(){
         "<tr><td>" + trainName + "</td><td>" 
         + destination + "</td><td>" 
         + trainTime + "</td><td>" 
-        + frequency + "</td><td>" 
-        + monthlyRate + "</td><td>" 
-        + totalBilled + "</td></tr>";
+        + frequency + "</td><td>";
     
     //append new row of data
     $("#train-table").append(trainData);
